@@ -17,5 +17,5 @@ export const TableInput = z.object({
 })
 
 export const BulkEntriesInput = z.object({
-  entries: z.array(EntryInput).min(1),
+  rows: z.array(EntryInput).min(1),
 });

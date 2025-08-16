@@ -10,7 +10,7 @@ export async function GET() {
             orderBy: {createdAt: "desc"},
             select: {
                 id: true, title: true, description: true, sides: true,
-                createdAt: true
+                createdAt: true, updatedAt: true
             },
         });
         return json({tables});

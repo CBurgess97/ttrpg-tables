@@ -15,9 +15,9 @@ datasource db {
 }
 
 model Table {
-  id        Int      @id @default(autoincrement())
+  id        String      @id @default(cuid())
   createdAt DateTime @default(now())
-  updatedAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
   title      String
   description String
   source    String?
@@ -26,9 +26,9 @@ model Table {
 }
 
 model Row {
-  id       Int    @id @default(autoincrement())
+  id        String      @id @default(cuid())
   table    Table  @relation(fields: [tableId], references: [id])
-  tableId  Int
+  tableId  String
   content  String
   rangemin Int
   rangemax Int
