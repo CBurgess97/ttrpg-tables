@@ -17,9 +17,11 @@ datasource db {
 model Table {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
-  name      String
+  updatedAt DateTime @default(now())
+  title      String
+  description String
   source    String?
-  sides     Int?
+  sides     String?
   rows      Row[]
 }
 
