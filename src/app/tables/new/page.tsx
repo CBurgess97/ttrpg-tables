@@ -25,7 +25,7 @@ export default function NewTablePage() {
     });
     if (!res.ok) return alert(await res.text());
     const data = await res.json();
-    router.push(`/tables/${data.id}`);
+    router.push(`/tables/${data.table.id}`);
   }
 
   return (

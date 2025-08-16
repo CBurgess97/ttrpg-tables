@@ -8,7 +8,7 @@ export default async function TablesPage() {
   });
 
   return (
-    <main className="mx-auto max-w-3xl p-6 space-y-6">
+    <main className="mx-auto max-w-7xl p-6 space-y-6">
       <header className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Your Tables</h1>
         <Link
@@ -27,7 +27,7 @@ export default async function TablesPage() {
           </Link>
         </div>
       ) : (
-        <ul className="grid gap-4">
+        <ul className="grid gap-6 p-6 grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
           {tables.map((t) => (
             <li key={t.id}>
               <Link
